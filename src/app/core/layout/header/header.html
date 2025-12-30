@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="header-inner">
+
+    <!-- Logo -->
+    <a routerLink="/" class="logo">
+      <img
+        src="assets/logo/signature-white.png"
+        alt="Simply Wellness"
+      />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav desktop-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+      <a routerLink="/consult" routerLinkActive="active">Consult</a>
+      <a routerLink="/resources" routerLinkActive="active">Resources</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button class="menu-btn" (click)="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-nav" [class.open]="menuOpen">
+    <a routerLink="/" (click)="closeMenu()">Home</a>
+    <a routerLink="/consult" (click)="closeMenu()">Consult</a>
+    <a routerLink="/resources" (click)="closeMenu()">Resources</a>
+    <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+    <a routerLink="/about" (click)="closeMenu()">About</a>
+  </nav>
+</header>
