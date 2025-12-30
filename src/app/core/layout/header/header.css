@@ -1,0 +1,127 @@
+/* ===== Header Base ===== */
+.header {
+  width: 100%;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Container */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 64px;             /* INCREASE SIGNATURE SIZE */
+  width: auto;
+  position: relative;
+  top: 2px;
+  transform: translateY(2px);               /* fine vertical tuning */
+}
+
+/* Desktop Nav */
+.desktop-nav {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.desktop-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.85;
+  position: relative;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  transition: opacity 0.2s ease;
+}
+
+.desktop-nav a:hover {
+  opacity: 1;
+}
+
+.desktop-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* ===== Hamburger Button ===== */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+}
+
+/* ===== Mobile Menu ===== */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #000;
+  padding: 1rem 1.5rem;
+}
+
+.mobile-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Responsive (Android & iOS safe) ===== */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .header {
+    height: 64px;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .mobile-nav.open {
+    display: flex;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+}
