@@ -82,35 +82,7 @@
   line-height: 1.6;
 }
 
-/* ================= SOCIAL ================= */
-.social {
-  background: #1e5bff;
-  color: #fff;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
 
-.social h2 {
-  font-size: 2.6rem;
-}
-
-.social p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
-
-.social-item {
-  font-size: 1.1rem;
-  font-weight: 500;
-}
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
@@ -129,6 +101,15 @@
 
   .about-cards {
     grid-template-columns: 1fr;
+  }
+
+    .social h2 {
+    font-size: 2rem;
+  }
+
+  .social-item img {
+    width: 48px;
+    height: 48px;
   }
 }
 :host {

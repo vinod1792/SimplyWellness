@@ -1,16 +1,11 @@
 import { Routes } from '@angular/router';
 
 import { Home } from './pages/home/home';
-import { About } from './pages/about/about';
-import { Consult } from './pages/consult/consult';
-import { Contact } from './pages/contact/contact';
-import { Resources } from './pages/resources/resources';
+
+import { PublicSpeaking } from './pages/public-speaking/public-speaking';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'about', component: About },
-  { path: 'consult', component: Consult },
-  { path: 'contact', component: Contact },
-  { path: 'resources', component: Resources },
+  { path: 'public-speaking', component: PublicSpeaking },
   { path: '**', redirectTo: '' }
 ];

@@ -11,15 +11,58 @@
 
     <!-- Desktop Navigation -->
     <nav class="nav desktop-nav">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/consult" routerLinkActive="active">Consult</a>
-      <a routerLink="/resources" routerLinkActive="active">Resources</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </a>
+
+      <a
+        href="https://thesimplywellness.com/products/book-a-session-with-dr-umesh-wadhavani"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Consult
+      </a>
+
+      <a
+        href="https://thesimplywellness.com/products/be-your-home-nutritionist"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Courses
+      </a>
+
+      <a
+        href="https://linktr.ee/drumeshwadhavani"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Content
+      </a>
+
+      <!-- Internal Angular page -->
+      <a routerLink="/public-speaking" routerLinkActive="active">
+        Public Speaking
+      </a>
+
+      <a
+        href="https://thesimplywellness.com/pages/contact"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Connect
+      </a>
     </nav>
 
     <!-- Mobile Hamburger -->
-    <button class="menu-btn" (click)="toggleMenu()" aria-label="Open menu">
+    <button
+      class="menu-btn"
+      (click)="toggleMenu()"
+      aria-label="Open menu"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -29,9 +72,46 @@
   <!-- Mobile Menu -->
   <nav class="mobile-nav" [class.open]="menuOpen">
     <a routerLink="/" (click)="closeMenu()">Home</a>
-    <a routerLink="/consult" (click)="closeMenu()">Consult</a>
-    <a routerLink="/resources" (click)="closeMenu()">Resources</a>
-    <a routerLink="/contact" (click)="closeMenu()">Contact</a>
-    <a routerLink="/about" (click)="closeMenu()">About</a>
+
+    <a
+      href="https://thesimplywellness.com/products/book-a-session-with-dr-umesh-wadhavani"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="closeMenu()"
+    >
+      Consult
+    </a>
+
+    <a
+      href="https://thesimplywellness.com/products/be-your-home-nutritionist"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="closeMenu()"
+    >
+      Courses
+    </a>
+
+    <a
+      href="https://linktr.ee/drumeshwadhavani"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="closeMenu()"
+    >
+      Content
+    </a>
+
+    <!-- Internal Angular page -->
+    <a routerLink="/public-speaking" (click)="closeMenu()">
+      Public Speaking
+    </a>
+
+    <a
+      href="https://thesimplywellness.com/pages/contact"
+      target="_blank"
+      rel="noopener noreferrer"
+      (click)="closeMenu()"
+    >
+      Connect
+    </a>
   </nav>
 </header>
